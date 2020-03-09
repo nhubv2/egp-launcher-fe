@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <a class="navbar-brand" href="http://kongproxy-egp-test.apps.egp.local/home">
+    <span class="project-name">eGP</span> Project
+  </a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link  text-center" href="http://kongproxy-egp-test.apps.egp.local/um">
+          <img style="height: 24px; width: auto;"
+            src="https://portal.vietcombank.com.vn/content/Platinum/KhoAnh/SPDV-01.png" />
+          User Management
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="http://kongproxy-egp-test.apps.egp.local/sh">
+          <img style="height: 24px; width: auto;"
+            src="https://portal.vietcombank.com.vn/content/personal/PublishingImages/Lists/Menu_Personal/Canhan/icon-khuyenmai.png" />
+          E-Shopping
+        </a>
+      </li>
+    </ul>
+
+    <div class="user-info" *ngIf="username">
+      Hello, 
+      <span class="username">{{username}}</span>
+      <a class="logout" href="javascript:void(0)" (click)="doLogout()">Logout</a>
+    </div>
+
+    <div class="unauthenticated" *ngIf="!username">
+      <a class="login" href="javascript:void(0)" (click)="doLogin()">LogIn</a>
+    </div>
+  </div>
+</nav>
